@@ -1,0 +1,53 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                "GAMES101.sln", 
+                "/m",
+                "/property:Configuration=Debug",
+                "/property:Platform=x64",
+                // Ask msbuild to generate full paths for file names.
+                "/property:GenerateFullPaths=true",
+                "/t:${input:projects}",
+                // Do not generate summary otherwise it leads to duplicate errors in Problems panel
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "build",
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                // "reveal": "silent"
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile",
+            "dependsOn":[
+                "premake"
+            ]
+        },
+        {
+            "label": "premake",
+            "type": "shell",
+            "command": "${workspaceFolder}/vendor/bin/premake/premake5.exe",
+            "args": [
+                "vs2022"
+            ],
+            "group": "build"
+        }
+    ],
+    "inputs": [
+    {
+      "type": "pickString",
+      "id": "projects",
+      "description": "Project",
+      "options": [
+        "Eigen"
+      ],
+      "default": "Eigen"
+    }
+  ]
+}

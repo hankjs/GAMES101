@@ -1,0 +1,17 @@
+{
+  "configurations": [
+    {
+      "name": "GAMES101",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${fileWorkspaceFolder}/bin/Debug-windows-x86_64/Main.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileWorkspaceFolder}/src",
+      "environment": [],
+      "console": "internalConsole",
+      "preLaunchTask": "build"
+    }
+  ],
+  "version": "2.0.0"
+}
