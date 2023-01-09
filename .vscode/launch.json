@@ -4,7 +4,7 @@
       "name": "GAMES101",
       "type": "cppvsdbg",
       "request": "launch",
-      "program": "${fileWorkspaceFolder}/bin/Debug-windows-x86_64/Main.exe",
+      "program": "${fileWorkspaceFolder}/bin/Main.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileWorkspaceFolder}/src",

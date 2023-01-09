@@ -45,7 +45,8 @@
       "id": "projects",
       "description": "Project",
       "options": [
-        "Eigen"
+        "Eigen",
+        "Hw0"
       ],
       "default": "Eigen"
     }

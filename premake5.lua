@@ -15,6 +15,9 @@ IncludeDir = {}
 project "Eigen"
 	location "Eigen"
 
+project "Hw0"
+	location "Hw0"
+
 project "*"
 	kind "ConsoleApp"
 	language "C++"
